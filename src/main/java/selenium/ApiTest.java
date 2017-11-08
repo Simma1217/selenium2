@@ -2,10 +2,12 @@ package selenium;
 
 import java.io.File;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -109,17 +111,98 @@ public class ApiTest {
 		wd.findElement(By.id("formID")).submit();
 	}
 	//鼠标操作，悬停
-	@Ignore
+		@Ignore
 		@Test
 		public void mouseAction() throws InterruptedException{
 			WebDriver wd=new FirefoxDriver();
 			String url="https://www.baidu.com";
 			wd.get(url);
-			System.out.println(wd.findElement(By.xpath("//*[@id='u1']/a[8]")).getText());
-			wd.findElement(By.xpath("//*[@id='u1']/a[8]")).click();
-//			Actions action=new Actions(wd);
-//			action.moveToElement(wd.findElement(By.linkText("设置"))).perform();
-//			//action.clickAndHold(wd.findElement(By.linkText("设置"))).perform();
+//			System.out.println(wd.findElement(By.xpath("//*[@id='u1']/a[8]")).getText());
+//			wd.findElement(By.xpath("//*[@id='u1']/a[8]")).click();
+			Actions action=new Actions(wd);
+			//可用使用moveToElement或者clickAndHold
+//			action.moveToElement(wd.findElement(By.xpath("//*[@id='u1']/a[8]"))).perform();
+			action.clickAndHold(wd.findElement(By.xpath("//*[@id='u1']/a[8]"))).perform();
+			//使用linktext获取不到元素
+			action.clickAndHold(wd.findElement(By.linkText("设置"))).perform();
 			
+		}
+		//鼠标操作，悬停
+		@Ignore
+		@Test
+		public void keyboardAction() throws InterruptedException{
+			WebDriver wd=new FirefoxDriver();
+			String url="https://www.baidu.com";
+			wd.get(url);
+			WebElement input=wd.findElement(By.id("kw"));
+			input.sendKeys("seleniumm");
+			input.sendKeys(Keys.BACK_SPACE);
+			input.sendKeys(Keys.CONTROL,"a");
+			input.sendKeys(Keys.CONTROL,"x");
+			input.sendKeys(Keys.CONTROL,"v"); 
+			input.sendKeys(Keys.CONTROL,"v"); 		
+			input.sendKeys(Keys.ENTER); 					
+		}
+		//获取验证信息
+		@Ignore
+		@Test
+		public void validate() throws Exception{
+			WebDriver wd=new FirefoxDriver();
+			String url="http://mail.163.com/";
+			String username="zaichangma";
+			String password="27japan!!";
+			wd.get(url);
+			System.out.println("登录之前地址为："+wd.getCurrentUrl()+"登录前的网址标题为："+wd.getTitle());
+			Thread.sleep(5000);
+			wd.switchTo().frame("x-URS-iframe");
+			wd.findElement(By.name("email")).clear();
+			wd.findElement(By.name("email")).sendKeys(username);
+			wd.findElement(By.name("password")).clear();
+			wd.findElement(By.name("password")).sendKeys(password);
+			//使用登录按钮提交
+			wd.findElement(By.id("dologin")).click();
+			//*****必须退出原先的frame再进行操作，否则就是#！@￥！@
+			wd.switchTo().defaultContent();
+			Thread.sleep(10000);
+			System.out.println("登录之后地址为："+wd.getCurrentUrl()+"登录后的网址标题为："+wd.getTitle());
+			String text=wd.findElement(By.id("spnUid")).getText();
+			System.out.println("登录之后的用户名位置显示："+text);
+		}
+		//设置元素等待
+		@Ignore
+		@Test
+		public void waitTest() throws Exception{
+			WebDriver wd=new FirefoxDriver();
+			String url="http://mail.163.com/";
+			//设置页面的加载时间为2秒
+//			wd.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+			String username="zaichangma";
+			String password="27japan!!";
+			wd.get(url);
+			System.out.println("登录之前地址为："+wd.getCurrentUrl()+"登录前的网址标题为："+wd.getTitle());
+			Thread.sleep(5000);
+			wd.switchTo().frame("x-URS-iframe");
+			wd.findElement(By.name("email")).clear();
+			wd.findElement(By.name("email")).sendKeys(username);
+			wd.findElement(By.name("password")).clear();
+			wd.findElement(By.name("password")).sendKeys(password);
+			//使用登录按钮提交
+			wd.findElement(By.id("dologin")).click();
+			//*****必须退出原先的frame再进行操作，否则就是#！@￥！@
+			wd.switchTo().defaultContent();
+			Thread.sleep(10000);
+			System.out.println("登录之后地址为："+wd.getCurrentUrl()+"登录后的网址标题为："+wd.getTitle());
+			wd.manage().timeouts().implicitlyWait(1,TimeUnit.NANOSECONDS);
+			String text=wd.findElement(By.id("spnUid0033")).getText();
+			System.out.println("登录之后的用户名位置显示："+text);
+		}
+		//多窗口切换
+		@Test
+		public void windowsSwitch()	throws InterruptedException{
+				WebDriver wd=new FirefoxDriver();
+				String url="https://www.baidu.com";
+				wd.get(url);
+				Actions action=new Actions(wd);
+				action.contextClick(wd.findElement(By.linkText("新闻"))).perform();
 		}
 }
