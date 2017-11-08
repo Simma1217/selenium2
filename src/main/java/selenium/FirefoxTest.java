@@ -16,7 +16,6 @@ public class FirefoxTest {
 		text.sendKeys("hello firefox ,i am selenium");
 		WebElement btn=wb.findElement(By.id("kw"));
 		btn.click();
-		wb.close();
-		
+//		wb.close();
 	}
 }
