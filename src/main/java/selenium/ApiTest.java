@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -196,13 +197,66 @@ public class ApiTest {
 			String text=wd.findElement(By.id("spnUid0033")).getText();
 			System.out.println("登录之后的用户名位置显示："+text);
 		}
-		//多窗口切换
+		//多窗口切换****无法打开新窗口-baidu浏览器
+		@Ignore
 		@Test
 		public void windowsSwitch()	throws InterruptedException{
 				WebDriver wd=new FirefoxDriver();
 				String url="https://www.baidu.com";
 				wd.get(url);
-				Actions action=new Actions(wd);
-				action.contextClick(wd.findElement(By.linkText("新闻"))).perform();
+				String newUrl=wd.findElement(By.name("tj_trnews")).getAttribute("href");
+				System.out.println(newUrl);
+				JavascriptExecutor je=(JavascriptExecutor) wd;
+				je.executeScript("window.open('"+newUrl+"','_blank')");
+				wd.close();
 		}
+		//多窗口切换****无法打开新窗口-照样失败
+		@Ignore
+		@Test
+		public void windowsSwitchqq()	throws InterruptedException{
+				WebDriver wd=new FirefoxDriver();
+				String url="http://www.qq.com/";
+				wd.get(url);
+				wd.findElement(By.cssSelector("#navBeta > div.navBetaInner > div:nth-child(5) > strong > a")).click();
+				wd.close();
+		}
+		//警告框处理
+		@Ignore
+		@Test
+		public void alertAction() throws InterruptedException{
+			WebDriver wd=new FirefoxDriver();
+			String url="https://www.baidu.com";
+			wd.get(url);
+			Actions action=new Actions(wd);
+			//鼠标悬停打开设置链接
+			action.clickAndHold(wd.findElement(By.xpath("//*[@id='u1']/a[8]"))).perform();
+			Thread.sleep(2000);
+			//打开搜索设置-查看隐藏的元素-chorme开发者模式，右键检查
+			wd.findElement(By.className("setpref")).click();
+			//保存设置
+			wd.findElement(By.cssSelector("#gxszButton > a.prefpanelgo")).click();
+			Thread.sleep(2000);
+			//接收弹窗
+			wd.switchTo().alert().accept();				
+		}
+		//上传文件
+		@Test
+		public void alertAction() throws InterruptedException{
+			WebDriver wd=new FirefoxDriver();
+			String url="https://www.baidu.com";
+			wd.get(url);
+			Actions action=new Actions(wd);
+			//鼠标悬停打开设置链接
+			action.clickAndHold(wd.findElement(By.xpath("//*[@id='u1']/a[8]"))).perform();
+			Thread.sleep(2000);
+			//打开搜索设置-查看隐藏的元素-chorme开发者模式，右键检查
+			wd.findElement(By.className("setpref")).click();
+			//保存设置
+			wd.findElement(By.cssSelector("#gxszButton > a.prefpanelgo")).click();
+			Thread.sleep(2000);
+			//接收弹窗
+			wd.switchTo().alert().accept();				
+		}
+		//下载文件
+		
 }
