@@ -239,6 +239,7 @@ public class ApiTest {
 		}
 		//上传文件
 		@Test
+<<<<<<< .merge_file_a09720
 		public void UploadAction() throws InterruptedException{
 			WebDriver wd=new FirefoxDriver();
 			String url="";
@@ -248,3 +249,24 @@ public class ApiTest {
 		//下载文件
 		
 }
+=======
+		public void alertAction() throws InterruptedException{
+			WebDriver wd=new FirefoxDriver();
+			String url="https://www.baidu.com";
+			wd.get(url);
+			Actions action=new Actions(wd);
+			//鼠标悬停打开设置链接
+			action.clickAndHold(wd.findElement(By.xpath("//*[@id='u1']/a[8]"))).perform();
+			Thread.sleep(2000);
+			//打开搜索设置-查看隐藏的元素-chorme开发者模式，右键检查
+			wd.findElement(By.className("setpref")).click();
+			//保存设置
+			wd.findElement(By.cssSelector("#gxszButton > a.prefpanelgo")).click();
+			Thread.sleep(2000);
+			//接收弹窗
+			wd.switchTo().alert().accept();				
+		}
+		//下载文件
+		
+}
+>>>>>>> .merge_file_a11124
