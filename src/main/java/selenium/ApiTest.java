@@ -1,20 +1,27 @@
 package selenium;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
+
 
 public class ApiTest {
 	@Ignore
@@ -245,19 +252,31 @@ public class ApiTest {
 		@Test
 		public void UploadAction() throws InterruptedException{
 			WebDriver wd=new FirefoxDriver();
-			String url="";
+			String url="file:///D:/gitRepo/selenium2/src/main/webapp/web/File.html";
 			wd.get(url);
-		
+			wd.findElement(By.name("file")).sendKeys("D:\\qiqi.jpg");
+			Thread.sleep(5000);
+			wd.findElement(By.name("submit")).click();
+			wd.quit();
 		}
 		//下载文件
+		//@Ignore
+		@Test
 		public void DownloadAction() throws InterruptedException{
+			FirefoxProfile fp=new FirefoxProfile();
+			fp.setPreference("browser.download.folderList",2);
+			fp.setPreference("browser.download.manager.showWhenStarting",false);
+			fp.setPreference("browser.download.dir","d:\\java");
+			fp.setPreference("browser.helperApps.neverAsk.saveToDisk","application/octet-stream");
 			WebDriver wd=new FirefoxDriver();
-			String url="";
+			String url="https://pypi.python.org/pypi/selenium";
 			wd.get(url);
+			wd.findElement(By.partialLinkText("selenium-3.7.0-py2.py3-none")).click();
 		
 		}
 		
 		//操作cookie
+		@Ignore
 		@Test
 		public void CookieDemo() throws InterruptedException{
 			WebDriver wd=new FirefoxDriver();
@@ -271,7 +290,17 @@ public class ApiTest {
 			//获取所有cookie并打印
 			Set<Cookie> set=wd.manage().getCookies();
 			System.out.println(set);
-		
 		}
-		
+		//屏幕截图
+		@Ignore
+		@Test
+		public void getScreenShot() throws InterruptedException, IOException{
+			WebDriver wd=new FirefoxDriver();
+			String url="http://www.youdao.com";
+			wd.get(url);
+			File destFile=new File("D:\\gitRepo\\selenium2\\png\\screenshot.png");
+			File srcFile=((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(srcFile, destFile);
+			wd.close();
+		}
 }
