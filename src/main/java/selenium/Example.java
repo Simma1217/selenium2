@@ -29,9 +29,8 @@ public class Example {
 		
 	}	
 	//登录csdn并下载文件到本地
-	@Ignore
 	@Test
-	public void downloadTest(){
+	public void downloadTest() throws InterruptedException{
 		FirefoxProfile fp=new FirefoxProfile();
 		fp.setPreference("browser.download.folderList",2);
 		fp.setPreference("browser.download.manager.showWhenStarting",false);
@@ -47,10 +46,9 @@ public class Example {
 		wd.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		wd.findElement(By.xpath("//*[@id='username']")).sendKeys("479921347@qq.com");
 		wd.findElement(By.xpath("//*[@id='password']")).sendKeys("27japan!!");
-		System.out.println(wd.manage().getCookies());
 		wd.findElement(By.xpath("//*[@id='fm1']/input[6]")).click();
-		wd.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-		wd.findElement(By.xpath("/html/body/div[6]/div[2]/div[2]/div[2]/a[3]")).click();
+		Thread.sleep(10000);
+		wd.findElement(By.linkText("下载")).click();
 		wd.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		wd.findElement(By.xpath("//*[@id='keywords']")).sendKeys("selenium");
 		wd.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[1]/a")).click();
