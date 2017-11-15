@@ -7,13 +7,13 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.interactions.Actions;
 
 public class Example {
 	//百度登录
@@ -36,14 +36,14 @@ public class Example {
 	//登录csdn并下载文件到本地
 	@Test
 	public void downloadTest() throws InterruptedException{
-//		FirefoxProfile fp=new FirefoxProfile();
-//		fp.setPreference("browser.download.folderList",2);
-//		fp.setPreference("browser.download.manager.showWhenStarting",false);
-//		fp.setPreference("browser.download.dir","e:\\java");
-//		fp.setPreference("browser.helperApps.neverAsk.saveToDisk","application/octet-stream");
-//		FirefoxOptions fo=new FirefoxOptions();
-//		fo.setProfile(fp);
-		WebDriver wd=new FirefoxDriver();
+		ChromeProfile cp=new ChromeProfile();
+		fp.setPreference("browser.download.folderList",2);
+		fp.setPreference("browser.download.manager.showWhenStarting",false);
+		fp.setPreference("browser.download.dir","e:\\java");
+		fp.setPreference("browser.helperApps.neverAsk.saveToDisk","application/octet-stream");
+		ChromeOptions co=new ChromeOptions();
+		co.setProfile(cp);
+		WebDriver wd=new ChromeDriver(cp);
 		String url="https://www.csdn.net/";
 		wd.get(url);
 		wd.findElement(By.xpath("//*[@id='login']/a[1]")).click();
