@@ -239,7 +239,7 @@ public class ApiTest {
 			//鼠标悬停打开设置链接
 			action.clickAndHold(wd.findElement(By.xpath("//*[@id='u1']/a[8]"))).perform();
 			Thread.sleep(2000);
-			//打开搜索设置-查看隐藏的元素-chorme开发者模式，右键检查
+			//打开搜索设置-查看隐藏的元素-chrome开发者模式，右键检查
 			wd.findElement(By.className("setpref")).click();
 			//保存设置
 			wd.findElement(By.cssSelector("#gxszButton > a.prefpanelgo")).click();

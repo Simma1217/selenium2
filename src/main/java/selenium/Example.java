@@ -45,14 +45,14 @@ public class Example {
         chromePrefs.put("profile.default_content_settings.popups", 0);
         chromePrefs.put("download.default_directory", downloadFilepath);
         ChromeOptions options = new ChromeOptions();
-        HashMap<String, Object> chromeOptionsMap = new HashMap<String, Object>();
+//        HashMap<String, Object> chromeOptionsMap = new HashMap<String, Object>();
         options.setExperimentalOption("prefs",chromePrefs);
         options.addArguments("--test-type");
-        DesiredCapabilities cap = DesiredCapabilities.chrome();
-        cap.setCapability(ChromeOptions.CAPABILITY, chromeOptionsMap);
-        cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        cap.setCapability(ChromeOptions.CAPABILITY, options);
-		WebDriver wd=new ChromeDriver(cap);
+//        DesiredCapabilities cap = DesiredCapabilities.chrome();
+//        cap.setCapability(ChromeOptions.CAPABILITY, chromeOptionsMap);
+//        cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//        cap.setCapability(ChromeOptions.CAPABILITY, options);
+		WebDriver wd=new ChromeDriver(options);
 		String url="https://www.csdn.net/";
 		wd.get(url);
 		wd.findElement(By.xpath("//*[@id='login']/a[1]")).click();
@@ -108,13 +108,11 @@ public class Example {
 		driver.findElement(By.xpath("//*[@id='_mail_component_70_70']/span[2]")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.className("nui-editableAddr-ipt")).sendKeys("479921347@qq.com");
-		driver.findElement(By.xpath("//*[@id='1510818939631_subjectInput']")).sendKeys("测试163邮箱发送");
-		driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='1510818939631_subjectInput']")));
+		driver.findElement(By.xpath("//input[ends-with(@id, 'subjectInput')]")).sendKeys("测试163邮箱发送");
+		driver.switchTo().frame(driver.findElement(By.className("APP-editor-iframe")));
 		driver.switchTo().defaultContent();
-		driver.findElement(By.xpath("//*[@id='_mail_button_9_263']/span[2]")).click();
+		//driver.findElement(By.className("nui-btn-text")).click();
 
-
-		
 		
 		//PublicModel.logout(driver);
 
