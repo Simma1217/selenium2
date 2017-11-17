@@ -18,4 +18,7 @@ public class PublicModel {
 	public static void logout(WebDriver driver){
 		driver.findElement(By.linkText("退出")).click();
 	}
+	public static void reLogin(WebDriver driver){
+		driver.findElement(By.linkText("重新登录")).click();
+	}
 }

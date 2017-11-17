@@ -1,6 +1,7 @@
 package selenium;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -13,8 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import selenium.mail163.PublicModel;
 
@@ -104,16 +103,16 @@ public class Example {
 		String password="27japan!!";
 		Thread.sleep(5000);
 		PublicModel.login(driver, username, password);
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		driver.findElement(By.xpath("//*[@id='_mail_component_70_70']/span[2]")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.className("nui-editableAddr-ipt")).sendKeys("479921347@qq.com");
-		driver.findElement(By.xpath("//input[ends-with(@id, 'subjectInput')]")).sendKeys("测试163邮箱发送");
+		driver.findElement(By.xpath("//input[contains(@id, 'subjectInput')]")).sendKeys("测试163邮箱发送");
 		driver.switchTo().frame(driver.findElement(By.className("APP-editor-iframe")));
+		driver.findElement(By.xpath("/html/body")).sendKeys("我就测试一下，来来来");
 		driver.switchTo().defaultContent();
-		//driver.findElement(By.className("nui-btn-text")).click();
-
-		
+		Thread.sleep(5000);//div[starts-with(@id, '_mail_button') and @role='button']
+		driver.findElement(By.cssSelector("div[id*='_mail_button']"));
 		//PublicModel.logout(driver);
 
 	}
