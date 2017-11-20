@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-testA">
-                    <span>E:\selenium2\src\test\java\testng\testng.xml</span>
+                    <span>D:\gitRepo\selenium2\src\test\java\testng\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-testA">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,21 @@
                       <a href="#" panel-name="suite-testA" class="show-methods passed suite-testA"> (show)</a> <!-- show-methods passed suite-testA -->
                     </span>
                     <div class="method-list-content passed suite-testA">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testA" title="testng.TestClassGroup" hash-for-method="f">f</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testA" title="testng.TestMethodGroup" hash-for-method="groupA">groupA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testA" title="testng.TestMethodGroup" hash-for-method="groupb">groupb</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-testA" title="testng.TestSuite" hash-for-method="run">run</a> <!-- method navigator-link -->
@@ -130,6 +145,36 @@
           <div class="suite-testA-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">testng.TestSuite</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="run">
+                  </a> <!-- run -->
+                  <span class="method-name">run</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testA-class-passed -->
+          <div class="suite-testA-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testng.TestClassGroup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="f">
+                  </a> <!-- f -->
+                  <span class="method-name">f</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testA-class-passed -->
+          <div class="suite-testA-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testng.TestDemoFormal</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -152,14 +197,21 @@
           <div class="suite-testA-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testng.TestSuite</span>
+              <span class="class-name">testng.TestMethodGroup</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="run">
-                  </a> <!-- run -->
-                  <span class="method-name">run</span>
+                  <a name="groupA">
+                  </a> <!-- groupA -->
+                  <span class="method-name">groupA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="groupb">
+                  </a> <!-- groupb -->
+                  <span class="method-name">groupb</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +219,7 @@
         </div> <!-- panel testA -->
         <div panel-name="test-xml-testA" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\selenium2\src\test\java\testng\testng.xml</span>
+            <span class="header-content">D:\gitRepo\selenium2\src\test\java\testng\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -180,14 +232,19 @@
       &lt;class name=&quot;testng.TestSuite&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- testClassA --&gt;
-  &lt;test name=&quot;testGroupA&quot;&gt;
+  &lt;test name=&quot;testGroupB&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
         &lt;include name=&quot;classGroup&quot;/&gt;
         &lt;include name=&quot;group1&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
-  &lt;/test&gt; &lt;!-- testGroupA --&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testng.TestSuite&quot;/&gt;
+      &lt;class name=&quot;testng.TestClassGroup&quot;/&gt;
+      &lt;class name=&quot;testng.TestMethodGroup&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- testGroupB --&gt;
 &lt;/suite&gt; &lt;!-- testA --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,7 +259,7 @@
                 <span class="test-name">testClassA (2 classes)</span>
               </li>
               <li>
-                <span class="test-name">testGroupA (0 classes)</span>
+                <span class="test-name">testGroupB (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,6 +269,26 @@
             <span class="header-content">Groups for testA</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">classGroup</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">f</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">group1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">groupA</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">groupb</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-testA" class="panel">
@@ -228,24 +305,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'run1')
 data.setCell(0, 2, 'testng.TestDemoFormal')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 15);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'run')
 data.setCell(1, 2, 'testng.TestSuite')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 5);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'run2')
-data.setCell(2, 2, 'testng.TestDemoFormal')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'f')
+data.setCell(2, 2, 'testng.TestClassGroup')
+data.setCell(2, 3, 4);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'run2')
+data.setCell(3, 2, 'testng.TestDemoFormal')
+data.setCell(3, 3, 3);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'groupA')
+data.setCell(4, 2, 'testng.TestMethodGroup')
+data.setCell(4, 3, 3);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'groupb')
+data.setCell(5, 2, 'testng.TestMethodGroup')
+data.setCell(5, 3, 3);
 window.suiteTableData['testA']= { tableData: data, tableDiv: 'times-div-testA'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 ms</span>
+              <span class="suite-total-time">Total running time: 33 ms</span>
               <div id="times-div-testA">
               </div> <!-- times-div-testA -->
             </div> <!-- times-div -->
@@ -260,9 +349,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-testA" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testng.TestSuite</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">run</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-testA" class="panel">
@@ -278,53 +374,89 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite1</span>
-                <span class="method-start">6 ms</span>
+                <span class="method-start">27 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-start">36 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testng.TestDemoFormal</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">run1</span>
-                <span class="method-start">22 ms</span>
+                <span class="method-start">79 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">run2</span>
-                <span class="method-start">29 ms</span>
+                <span class="method-start">98 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testng.TestSuite</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-start">108 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">run</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-start">109 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">42 ms</span>
+                <span class="method-start">117 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod1</span>
-                <span class="method-start">43 ms</span>
+                <span class="method-start">124 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">43 ms</span>
+                <span class="method-start">124 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest1</span>
-                <span class="method-start">43 ms</span>
+                <span class="method-start">126 ms</span>
               </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">beforeGroupClass</span>
+                <span class="method-start">228 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testng.TestClassGroup</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">f</span>
+                <span class="method-start">229 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testng.TestSuite</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">beforeGroups</span>
+                <span class="method-start">237 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testng.TestMethodGroup</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">groupA</span>
+                <span class="method-start">238 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">groupb</span>
+                <span class="method-start">247 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testng.TestSuite</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">afterGroups</span>
+                <span class="method-start">253 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">76 ms</span>
+                <span class="method-start">278 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

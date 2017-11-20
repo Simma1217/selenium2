@@ -1,67 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="1" total="7" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="testA" duration-ms="64" started-at="2017-11-20T09:39:05Z" finished-at="2017-11-20T09:39:05Z">
+  <suite name="testA" duration-ms="224" started-at="2017-11-20T12:53:10Z" finished-at="2017-11-20T12:53:10Z">
     <groups>
+      <group name="classGroup">
+        <method signature="TestClassGroup.f()[pri:0, instance:testng.TestClassGroup@6e06451e]" name="f" class="testng.TestClassGroup"/>
+      </group> <!-- classGroup -->
+      <group name="group1">
+        <method signature="TestMethodGroup.groupA()[pri:0, instance:testng.TestMethodGroup@59494225]" name="groupA" class="testng.TestMethodGroup"/>
+        <method signature="TestMethodGroup.groupb()[pri:0, instance:testng.TestMethodGroup@59494225]" name="groupb" class="testng.TestMethodGroup"/>
+      </group> <!-- group1 -->
     </groups>
-    <test name="testClassA" duration-ms="36" started-at="2017-11-20T09:39:05Z" finished-at="2017-11-20T09:39:05Z">
+    <test name="testClassA" duration-ms="96" started-at="2017-11-20T12:53:10Z" finished-at="2017-11-20T12:53:10Z">
       <class name="testng.TestSuite">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testng.TestSuite@6eebc39e]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.TestSuite@6eebc39e]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="run()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="run" duration-ms="1" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="run()[pri:0, instance:testng.TestSuite@6eebc39e]" name="run" duration-ms="5" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.TestSuite@6eebc39e]" name="afterMethod" is-config="true" duration-ms="6" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterMethod1()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="afterMethod1" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod1 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testng.TestSuite@6eebc39e]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterTest1()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="afterTest1" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="afterMethod1()[pri:0, instance:testng.TestSuite@6eebc39e]" name="afterMethod1" is-config="true" duration-ms="0" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod1 -->
+        <test-method status="PASS" signature="afterTest1()[pri:0, instance:testng.TestSuite@6eebc39e]" name="afterTest1" is-config="true" duration-ms="0" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest1 -->
       </class> <!-- testng.TestSuite -->
       <class name="testng.TestDemoFormal">
-        <test-method status="PASS" signature="run1()[pri:0, instance:testng.TestDemoFormal@6eebc39e]" name="run1" duration-ms="5" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="run1()[pri:0, instance:testng.TestDemoFormal@464bee09]" name="run1" duration-ms="15" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run1 -->
-        <test-method status="PASS" signature="run2()[pri:0, instance:testng.TestDemoFormal@6eebc39e]" name="run2" duration-ms="1" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="run2()[pri:0, instance:testng.TestDemoFormal@464bee09]" name="run2" duration-ms="3" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run2 -->
       </class> <!-- testng.TestDemoFormal -->
     </test> <!-- testClassA -->
-    <test name="testGroupA" duration-ms="1" started-at="2017-11-20T09:39:05Z" finished-at="2017-11-20T09:39:05Z">
+    <test name="testGroupB" duration-ms="29" started-at="2017-11-20T12:53:10Z" finished-at="2017-11-20T12:53:10Z">
+      <class name="testng.TestClassGroup">
+        <test-method status="PASS" signature="f()[pri:0, instance:testng.TestClassGroup@6e06451e]" name="f" duration-ms="4" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- testng.TestClassGroup -->
       <class name="testng.TestSuite">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="beforeSuite" is-config="true" duration-ms="6" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testng.TestSuite@6eebc39e]" name="beforeSuite" is-config="true" duration-ms="27" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeSuite1()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="beforeSuite1" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="beforeSuite1()[pri:0, instance:testng.TestSuite@6eebc39e]" name="beforeSuite1" is-config="true" duration-ms="1" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite1 -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testng.TestSuite@4dfa3a9d]" name="afterSuite" is-config="true" duration-ms="0" started-at="2017-11-20T17:39:05Z" finished-at="2017-11-20T17:39:05Z">
+        <test-method status="PASS" signature="beforeGroupClass()[pri:0, instance:testng.TestSuite@53f65459]" name="beforeGroupClass" is-config="true" duration-ms="1" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeGroupClass -->
+        <test-method status="PASS" signature="beforeGroups()[pri:0, instance:testng.TestSuite@53f65459]" name="beforeGroups" is-config="true" duration-ms="1" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeGroups -->
+        <test-method status="PASS" signature="afterGroups()[pri:0, instance:testng.TestSuite@53f65459]" name="afterGroups" is-config="true" duration-ms="0" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterGroups -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testng.TestSuite@6eebc39e]" name="afterSuite" is-config="true" duration-ms="0" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- testng.TestSuite -->
-    </test> <!-- testGroupA -->
+      <class name="testng.TestMethodGroup">
+        <test-method status="PASS" signature="groupA()[pri:0, instance:testng.TestMethodGroup@59494225]" name="groupA" duration-ms="3" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupA -->
+        <test-method status="PASS" signature="groupb()[pri:0, instance:testng.TestMethodGroup@59494225]" name="groupb" duration-ms="3" started-at="2017-11-20T20:53:10Z" finished-at="2017-11-20T20:53:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- groupb -->
+      </class> <!-- testng.TestMethodGroup -->
+    </test> <!-- testGroupB -->
   </suite> <!-- testA -->
 </testng-results>
