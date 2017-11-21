@@ -1,4 +1,4 @@
-package testng;
+package firstDemo;
 
 public class RandomEmailGenerator {
 	public String generate(){

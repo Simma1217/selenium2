@@ -1,9 +1,9 @@
-package testng;
+package ignore;
 
 import org.testng.annotations.Test;
 
 public class TestDemoFormal {
-  @Test
+  @Test//(enabled=false)
   public void run1() {
 	  System.out.println("run1");
   }

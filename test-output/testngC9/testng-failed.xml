@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testngC9]">
+  <test name="testC9(failed)">
+    <classes>
+      <class name="seleniumChapter9.TestBaidu">
+        <methods>
+          <include name="testCase"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- seleniumChapter9.TestBaidu -->
+    </classes>
+  </test> <!-- testC9(failed) -->
+</suite> <!-- Failed suite [testngC9] -->

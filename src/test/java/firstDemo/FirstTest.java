@@ -1,4 +1,4 @@
-package testng;
+package firstDemo;
 
 import org.junit.Assert;
 import org.testng.annotations.Test;

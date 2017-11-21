@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testng_group">
+<!-- 	<test name="testA">
+		<classes>
+			<class name="testng.group.TestMethodGroup"></class>
+			<class name="testng.group.TestClassGroup"></class>
+		</classes>
+	</test> -->
+	<test name="testB">
+		<groups>
+			<run>
+				<include name="selenium-test"></include>
+				<exclude name="group1"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="testng.group.TestMethodGroup"></class>
+			<class name="testng.group.TestClassGroup"></class>
+		</classes>
+	</test>
+</suite>

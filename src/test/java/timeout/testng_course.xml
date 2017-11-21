@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testng_course">
+	<test name="testA">
+		<classes>
+			<class name="testng.TestDemoFormal">
+				<methods>
+					<include name="run1"></include>
+					<!-- 忽略测试，忽略方法 -->
+					<exclude name="run2"></exclude>
+				</methods>
+			</class>
+			
+		</classes>
+	</test>
+</suite>
