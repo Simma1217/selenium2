@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="depend.MethodSkiped">
+      <class name="param.TestParams">
         <methods>
-          <include name="fun1"/>
-          <include name="fun2"/>
+          <include name="paramsTest"/>
         </methods>
-      </class> <!-- depend.MethodSkiped -->
+      </class> <!-- param.TestParams -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
