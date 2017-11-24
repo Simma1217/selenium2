@@ -1,24 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113" started-at="2017-11-21T15:10:37Z" finished-at="2017-11-21T15:10:37Z">
+  <suite name="testng-account" duration-ms="147025" started-at="2017-11-22T12:58:18Z" finished-at="2017-11-22T13:00:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="113" started-at="2017-11-21T15:10:37Z" finished-at="2017-11-21T15:10:37Z">
-      <class name="param.TestParams3Map">
-        <test-method status="PASS" signature="paramsMapTest(java.util.Map)[pri:0, instance:param.TestParams3Map@6a41eaa2]" name="paramsMapTest" duration-ms="40" started-at="2017-11-21T23:10:37Z" data-provider="mapDataPro" finished-at="2017-11-21T23:10:37Z">
+    <test name="test-account" duration-ms="147025" started-at="2017-11-22T12:58:18Z" finished-at="2017-11-22T13:00:45Z">
+      <class name="Project.TestAccount">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestAccount@6eebc39e]" name="setUp" is-config="true" duration-ms="16691" started-at="2017-11-22T20:58:18Z" finished-at="2017-11-22T20:58:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.TestAccount@6eebc39e]" name="verifyLogin" duration-ms="5443" started-at="2017-11-22T20:58:35Z" data-provider="dataPro" finished-at="2017-11-22T20:58:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{param3=qiqi, param1=simma, param2=ludahai}]]>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[请输入帐号]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- paramsMapTest -->
-      </class> <!-- param.TestParams3Map -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestAccount@6eebc39e]" name="setUp" is-config="true" duration-ms="24204" started-at="2017-11-22T20:58:40Z" finished-at="2017-11-22T20:59:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.TestAccount@6eebc39e]" name="verifyLogin" duration-ms="5647" started-at="2017-11-22T20:59:04Z" data-provider="dataPro" finished-at="2017-11-22T20:59:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zaichangma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[请输入密码]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestAccount@6eebc39e]" name="setUp" is-config="true" duration-ms="17589" started-at="2017-11-22T20:59:10Z" finished-at="2017-11-22T20:59:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.TestAccount@6eebc39e]" name="verifyLogin" duration-ms="11159" started-at="2017-11-22T20:59:28Z" data-provider="dataPro" finished-at="2017-11-22T20:59:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aaaa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[请输入帐号]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestAccount@6eebc39e]" name="setUp" is-config="true" duration-ms="15785" started-at="2017-11-22T20:59:39Z" finished-at="2017-11-22T20:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.TestAccount@6eebc39e]" name="verifyLogin" duration-ms="5488" started-at="2017-11-22T20:59:55Z" data-provider="dataPro" finished-at="2017-11-22T21:00:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zaichangma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aaa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[帐号或密码错误]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestAccount@6eebc39e]" name="setUp" is-config="true" duration-ms="16440" started-at="2017-11-22T21:00:00Z" finished-at="2017-11-22T21:00:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.TestAccount@6eebc39e]" name="verifyLogin" duration-ms="5447" started-at="2017-11-22T21:00:17Z" data-provider="dataPro" finished-at="2017-11-22T21:00:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aaa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[27japan!!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[帐号或密码错误]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestAccount@6eebc39e]" name="setUp" is-config="true" duration-ms="17679" started-at="2017-11-22T21:00:22Z" finished-at="2017-11-22T21:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.TestAccount@6eebc39e]" name="verifyLogin" duration-ms="5424" started-at="2017-11-22T21:00:40Z" data-provider="dataPro" finished-at="2017-11-22T21:00:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aaa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bbb]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[帐号或密码错误]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- Project.TestAccount -->
+    </test> <!-- test-account -->
+  </suite> <!-- testng-account -->
 </testng-results>

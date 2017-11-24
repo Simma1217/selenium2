@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testng-send]">
+  <parameter name="password" value="27japan!!"/>
+  <parameter name="username" value="zaichangma"/>
+  <test name="test-send(failed)">
+    <classes>
+      <class name="Project.TestSend">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Project.TestSend -->
+    </classes>
+  </test> <!-- test-send(failed) -->
+</suite> <!-- Failed suite [testng-send] -->
