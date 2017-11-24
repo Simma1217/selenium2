@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="testng-login">
+<suite name="testng-delete">
 	<parameter name="username" value="zaichangma"></parameter>
 	<parameter name="password" value="27japan!!"></parameter>
-	<test name="test-login">
+	<test name="test-delete">
 		<classes>
-			<class name="Project.TestLogin"></class>
+			<class name="Project.TestDelete"></class>
 		</classes>
 	</test>
 </suite>
