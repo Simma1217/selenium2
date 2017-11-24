@@ -54,13 +54,14 @@ public class TestDelete {
 			if(span.getText().equals("删 除")){
 				System.out.println(span.getText());
 				span.click();
+				break;
 			}
 		}
-/*		Thread.sleep(5000);
+		Thread.sleep(2000);
 		//断言是否已删除
 		String text=driver.findElement(By.xpath("//span[@class='nui-tips-text']/a")).getText();
 		System.out.println(text);
-		Assert.assertEquals(text,"已删除");*/
+		Assert.assertEquals(text,"已删除");
 
 		
 		//PublicModel.logout(driver);
