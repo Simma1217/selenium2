@@ -30,17 +30,17 @@
         <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>3.6.0</version>
+        <version>3.0.0</version>
     </dependency>
         <dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-chrome-driver</artifactId>
     	<version>3.6.0</version>
     </dependency>
-            <dependency>
+         <dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-firefox-driver</artifactId>
-    	<version>3.6.0</version>
+    	<version>3.0.0</version>
     </dependency>
 	<dependency>
 	    <groupId>commons-io</groupId>
