@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 import selenium.mail163.PublicModel;
 
@@ -105,16 +106,23 @@ public class Example {
 		PublicModel.login(driver, username, password);
 		Thread.sleep(7000);
 		driver.findElement(By.xpath("//*[@id='_mail_component_70_70']/span[2]")).click();
-		Thread.sleep(10000);
+		Thread.sleep(4000);
 		driver.findElement(By.className("nui-editableAddr-ipt")).sendKeys("479921347@qq.com");
 		driver.findElement(By.xpath("//input[contains(@id, 'subjectInput')]")).sendKeys("测试163邮箱发送");
 		driver.switchTo().frame(driver.findElement(By.className("APP-editor-iframe")));
 		driver.findElement(By.xpath("/html/body")).sendKeys("我就测试一下，来来来");
 		driver.switchTo().defaultContent();
 		Thread.sleep(5000);//div[starts-with(@id, '_mail_button') and @role='button']
-		driver.findElement(By.cssSelector("div[id*='_mail_button']"));
-		//PublicModel.logout(driver);
-
+		List<WebElement> spans=driver.findElements(By.xpath("//span[@class='nui-btn-text']"));
+		for(WebElement span:spans){
+			String text=span.getText();
+			if("发送".equals(text)){
+				span.click();
+			}
+		}
+		String text =driver.findElement(By.className("tK1")).getText();
+		Assert.assertEquals(text,"发送成功");
+		
 	}
 
 }

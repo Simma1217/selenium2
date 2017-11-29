@@ -13,13 +13,13 @@ import org.testng.annotations.AfterClass;
 public class TestBaidu {
 	private WebDriver driver;
 	private String url;
-  @Test
+  @BeforeClass
   public void setUp() {
 	  driver=new ChromeDriver();
 	  url="https://www.baidu.com/";
 	  driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
   }
-  @BeforeClass
+  @Test
   public void testCase() throws Exception {
 	  driver.get(url);
 	  driver.findElement(By.id("kw")).sendKeys("testNG");

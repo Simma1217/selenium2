@@ -2,23 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113" started-at="2017-11-21T15:10:37Z" finished-at="2017-11-21T15:10:37Z">
+  <suite name="testng-delete" duration-ms="87298" started-at="2017-11-24T09:26:25Z" finished-at="2017-11-24T09:27:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="113" started-at="2017-11-21T15:10:37Z" finished-at="2017-11-21T15:10:37Z">
-      <class name="param.TestParams3Map">
-        <test-method status="PASS" signature="paramsMapTest(java.util.Map)[pri:0, instance:param.TestParams3Map@6a41eaa2]" name="paramsMapTest" duration-ms="40" started-at="2017-11-21T23:10:37Z" data-provider="mapDataPro" finished-at="2017-11-21T23:10:37Z">
+    <test name="test-delete" duration-ms="87298" started-at="2017-11-24T09:26:25Z" finished-at="2017-11-24T09:27:52Z">
+      <class name="Project.TestDelete">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Project.TestDelete@f6c48ac]" name="setUp" is-config="true" duration-ms="2904" started-at="2017-11-24T17:26:25Z" finished-at="2017-11-24T17:26:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String)[pri:0, instance:Project.TestDelete@f6c48ac]" name="delete" duration-ms="84370" started-at="2017-11-24T17:26:28Z" finished-at="2017-11-24T17:27:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{param3=qiqi, param1=simma, param2=ludahai}]]>
+                <![CDATA[zaichangma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[27japan!!]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- paramsMapTest -->
-      </class> <!-- param.TestParams3Map -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- delete -->
+      </class> <!-- Project.TestDelete -->
+    </test> <!-- test-delete -->
+  </suite> <!-- testng-delete -->
 </testng-results>
